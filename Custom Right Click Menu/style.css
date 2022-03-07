@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #4285f4;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  min-height: 100vh;
+}
+.container {
+  position: absolute;
+  /* display: none; */
+  visibility: hidden;
+  background: #fff;
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+ul {
+  list-style: none;
+}
+li {
+  font-size: 21px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+li i {
+  margin-right: 7px;
+}
+li:hover {
+  background: #f2f2f2;
+}
+.menu > :last-child {
+  position: relative;
+  margin-top: 10px;
+}
+.menu > :last-child::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: #ccc;
+  width: calc(100% + 30px);
+  top: 0;
+  right: -15px;
+}
+.item.share {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-menu {
+  background: #fff;
+  width: 200px;
+  right: -200px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -35px;
+  opacity: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease;
+}
+.item.share:hover .sub-menu {
+  opacity: 1;
+}
