@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+:root {
+  --white: #fff;
+  --balck: #24292d;
+  --nav-main: #4070f4;
+  --switchers-main: #0b3cc1;
+  --light-bg: #f0f8ff;
+}
+body {
+  font-family: Poppins, sans-serif;
+}
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: var(--nav-main);
+}
+nav ul a {
+  opacity: 0.7;
+}
+nav ul a:hover {
+  opacity: 1;
+}
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+ul li {
+  margin: 0 10px;
+  font-size: 21px;
+}
+.apperance {
+  display: flex;
+  position: relative;
+}
+.apperance > div {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: var(--white);
+  background: var(--switchers-main);
+  margin: 0 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dark-light,
+.icons {
+  opacity: 0.8;
+  text-align: center;
+}
+.dark-light:hover,
+.icons:hover {
+  opacity: 1;
+}
+.color-box {
+  position: absolute;
+  background: var(--white);
+  right: 0px;
+  min-height: 100px;
+  top: calc(50px + 20px);
+  width: 230px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.color-box.open {
+  display: block;
+}
+.color-box::before {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--white);
+  top: -10px;
+  right: 20px;
+}
+.color-box h4 {
+  color: #24292d;
+  margin-bottom: 10px;
+}
+.color-box .colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.btn.blue {
+  background: #4070f4;
+}
+.btn.blue.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4070f4;
+}
+.btn.orange {
+  background: #f79f1f;
+}
+.btn.orange.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f79f1f;
+}
+.btn.purple {
+  background: #8e44ab;
+}
+.btn.purple.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #8e44ab;
+}
+.btn.green {
+  background: #3a9943;
+}
+.btn.green.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #3a9943;
+}
+
+.landing {
+  background: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  height: calc(100vh - 80px);
+}
+.landing h2 {
+  font-size: 40px;
+}
+.landing h3 {
+  font-size: 35px;
+}
+.landing h3 span {
+  color: var(--nav-main);
+}
+.landing p {
+  font-size: 14px;
+  width: 40%;
+  color: var(--balck);
+}
+.landing button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin-top: 20px;
+  background: var(--nav-main);
+  font-size: 20px;
+}
+.landing button:hover {
+  background: var(--switchers-main);
+}
+.landing i {
+  transform: rotate(45deg);
+}
+@media (max-width: 1100px) {
+  .landing p {
+    width: 100%;
+  }
+}
