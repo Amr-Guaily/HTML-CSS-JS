@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(./images/bg-intro-desktop.png);
+  max-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 25px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container > div {
+  flex: 1;
+  padding: 0 20px;
+}
+.container .text {
+  color: white;
+}
+.text h1 {
+  line-height: 1.1;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.text p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.btn {
+  width: 100%;
+  padding: 18px 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn.btn-purple {
+  background: hsl(248, 32%, 49%);
+  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+}
+.btn-purple span {
+  color: hsl(246, 25%, 77%);
+  font-size: 13px;
+}
+.btn.btn-purple:active {
+  border: 1px solid hsl(248, 32%, 49%);
+}
+.btn.btn-green {
+  background: hsl(154, 59%, 51%);
+  word-spacing: 2px;
+  border: 1px solid hsl(154, 59%, 45%);
+  border-bottom-width: 3px;
+  transition: transform 0.4s ease;
+  text-transform: uppercase;
+}
+.btn-green:active {
+  border-bottom-width: 1px;
+  transform: translateY(2px);
+}
+.form form {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+}
+form input {
+  width: 100%;
+  padding: 15px 25px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input:focus {
+  outline: none;
+  border: 3px solid #ccc;
+}
+input.error {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+.form-control {
+  position: relative;
+  margin-bottom: 30px;
+}
+.form-control small {
+  position: absolute;
+  color: hsl(0, 100%, 74%);
+  width: 100%;
+  top: 100%;
+  display: block;
+  text-align: right;
+}
+.form-control i {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  margin-right: 10px;
+  color: hsl(0, 100%, 74%);
+  font-size: 20px;
+  display: none;
+}
+input.error::placeholder {
+  color: hsl(0, 100%, 74%);
+}
+form p {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 15px;
+  color: hsl(246, 25%, 77%);
+}
+form p span {
+  color: hsl(0, 100%, 74%);
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .text {
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+}

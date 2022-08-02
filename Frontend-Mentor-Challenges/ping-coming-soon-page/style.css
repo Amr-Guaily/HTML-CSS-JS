@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+.container {
+  max-width: 900px;
+  margin: 50px auto 0;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  text-align: center;
+}
+.logo {
+  text-align: center;
+  margin: 0 auto 20px;
+}
+.header h1 {
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+h1 span {
+  font-weight: 700;
+  color: #000;
+}
+.input-field {
+  margin: 20px 0 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+input {
+  width: 70%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid hsl(223, 100%, 88%);
+}
+input:focus {
+  outline: none;
+}
+input.error {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+button {
+  width: 30%;
+  border-radius: 30px;
+  border: 1px solid hsl(223, 87%, 63%);
+  padding: 10px 15px;
+  background: hsl(223, 87%, 63%);
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 hsl(223, 100%, 88%);
+}
+button:active {
+  opacity: 0.8;
+}
+small.error {
+  position: absolute;
+  top: 100%;
+  left: 18px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: hsl(354, 100%, 66%);
+  display: none;
+}
+.image {
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+img {
+  max-width: 100%;
+}
+footer {
+  text-align: center;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+ul li {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  color: hsl(223, 87%, 63%);
+}
+ul li:hover {
+  color: #fff;
+  background: hsl(223, 87%, 63%);
+  border: 1px solid hsl(223, 87%, 63%);
+}
+footer p {
+  color: hsl(0, 0%, 59%);
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  body {
+    overflow-y: auto;
+  }
+  .header h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .input-field {
+    display: block;
+    width: 100%;
+  }
+  .input-field input,
+  .input-field button {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .input-field small.error {
+    position: relative;
+    margin: 0 auto 15px -40px;
+    display: none;
+  }
+}

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.container .info {
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-position: center center;
+  width: 60%;
+  padding: 0 50px;
+}
+.info .logo {
+  width: 200px;
+  margin: 60px 0;
+}
+.bg-mobile {
+  display: none;
+}
+.info .inner-container {
+  max-width: 450px;
+}
+.info h1 {
+  color: hsl(0, 6%, 24%);
+  font-size: 60px;
+  letter-spacing: 10px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  animation: comeinleft 0.5s ease forwards;
+}
+h1 span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 200;
+}
+@keyframes comeinleft {
+  to {
+    transform: translateX(0);
+  }
+}
+.info p {
+  color: hsl(0, 36%, 70%);
+  line-height: 26px;
+  margin-top: 30px;
+  transform: translateX(100%);
+  animation: comeinright 0.5s ease forwards;
+}
+@keyframes comeinright {
+  to {
+    transform: translateX(0);
+  }
+}
+.input-field {
+  position: relative;
+}
+.input-field input {
+  background: transparent;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+  height: 55px;
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+input.error {
+  border: 2px solid hsl(0, 93%, 68%);
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 100px;
+  border-radius: 50px;
+  position: absolute;
+  height: 55px;
+  top: 50px;
+  right: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+button:hover {
+  /* opacity: 0.6; */
+  background: linear-gradient(135deg, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+}
+.error-icon {
+  position: absolute;
+  right: 115px;
+  top: 66px;
+  display: none;
+}
+small {
+  display: none;
+  margin: 10px 0 0 30px;
+  color: hsl(0, 93%, 68%);
+}
+
+.container .image {
+  width: 40%;
+  background-image: url(./images/hero-desktop.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    overflow-x: hidden;
+  }
+  .container .info {
+    margin: 0 -50px;
+    width: calc(100% + 100px);
+  }
+  .bg-mobile {
+    display: block;
+    width: 100%;
+  }
+  .info .logo {
+    width: 150px;
+    margin: 40px 50px;
+  }
+  .inner-container {
+    text-align: center;
+    padding: 25px 25px 70px;
+    margin: 40px auto 0;
+  }
+  .input-field small {
+    text-align: left;
+  }
+  .image {
+    display: none;
+  }
+}
