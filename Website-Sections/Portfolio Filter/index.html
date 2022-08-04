@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Filter</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="active-tab" data-filter=".all">All</li>
+        <li data-filter=".mobile">Mobile</li>
+        <li data-filter=".camera">Camera</li>
+        <li data-filter=".headphone">Headphone</li>
+        <li data-filter=".shoe">shoe</li>
+      </ul>
+      <div class="product">
+        <img class="all camera" src="./imgs/camera1.jpg" alt="" />
+        <img class="all camera" src="./imgs/camera2.jpg" alt="" />
+        <img class="all camera" src="./imgs/camera3.jpg" alt="" />
+        <img class="all camera" src="./imgs/camera4.jpg" alt="" />
+        <img class="all mobile" src="./imgs/mobile1.jpg" alt="" />
+        <img class="all mobile" src="./imgs/mobile2.jpg" alt="" />
+        <img class="all mobile" src="./imgs/mobile3.jpg" alt="" />
+        <img class="all mobile" src="./imgs/mobile4.jpg" alt="" />
+        <img class="all mobile" src="./imgs/mobile5.jpg" alt="" />
+        <img class="all headphone" src="./imgs/headphone1.jpg" alt="" />
+        <img class="all headphone" src="./imgs/headphone2.jpg" alt="" />
+        <img class="all headphone" src="./imgs/headphone3.jpg" alt="" />
+        <img class="all headphone" src="./imgs/headphone4.jpg" alt="" />
+        <img class="all shoe" src="./imgs/shoe1.jpg" alt="" />
+        <img class="all shoe" src="./imgs/shoe2.jpg" alt="" />
+        <img class="all shoe" src="./imgs/shoe3.jpg" alt="" />
+        <img class="all shoe" src="./imgs/shoe4.jpg" alt="" />
+      </div>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll('li');
+      const itms = document.querySelectorAll('img');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', (e) => {
+          tabs.forEach((tab) => {
+            tab.classList.remove('active-tab');
+          });
+          e.currentTarget.classList.add('active-tab');
+          itms.forEach((itm) => {
+            itm.style.display = 'none';
+          });
+          // console.log(e.currentTarget.dataset.filter);
+          document
+            .querySelectorAll(e.currentTarget.dataset.filter)
+            .forEach((itm) => {
+              itm.style.display = 'block';
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
