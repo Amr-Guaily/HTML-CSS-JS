@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.container ul li {
+  list-style: none;
+  background-color: #eee;
+  padding: 12px 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+.container ul li.active-tab {
+  background-color: #1d9bf0;
+  color: white;
+}
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.product img {
+  width: 250px;
+  height: 250px;
+  max-width: 100%;
+  object-fit: cover;
+  margin: 4px;
+}
