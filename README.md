@@ -16,4 +16,4 @@ See live [here](https://quiz0-app.netlify.app/)
 
 ### Shopping Cart
 
-See live [here](https://quiz0-app.netlify.app/)
+See live [here](https://shopping0-cart.netlify.app/)
