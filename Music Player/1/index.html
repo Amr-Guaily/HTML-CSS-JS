@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="player">
+      <div class="container">
+        <div class="details">
+          <p class="now-playing"></p>
+          <img class="track-art" />
+          <h3 class="track-name"></h3>
+          <p class="track-artist"></p>
+        </div>
+
+        <div class="slider_container">
+          <div class="current-time">00:00</div>
+          <input type="range" min="1" max="100" value="0" class="seek_slider" />
+          <div class="total-duration">00:00</div>
+        </div>
+        <div class="slider_container">
+          <i class="fa fa-volume-down"></i>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="99"
+            class="volume_slider"
+          />
+          <i class="fa fa-volume-up"></i>
+        </div>
+
+        <div class="buttons">
+          <div class="prev-track">
+            <i class="fa fa-step-backward fa-2x"></i>
+          </div>
+          <div class="playpause-track">
+            <i class="fa fa-play-circle fa-4x"></i>
+          </div>
+          <div class="next-track">
+            <i class="fa fa-step-forward fa-2x"></i>
+          </div>
+        </div>
+
+        <div id="wave">
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
