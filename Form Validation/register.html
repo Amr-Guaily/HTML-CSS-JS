@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Register Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <img src="./Contact-us.png" alt="random-img" />
+      </div>
+      <div class="right-side">
+        <div>
+          <h1>Create Account</h1>
+          <p>Go ahead and sign up, let everyone know how awesome you are!</p>
+        </div>
+
+        <form id="form">
+          <div class="input-control">
+            <input type="text" placeholder="Username" id="username" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <input type="email" placeholder="Email" id="email" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <input type="password" placeholder="Password" id="password" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <input
+              type="password"
+              placeholder="ConfirmPassword"
+              id="confirmPassword"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="actions">
+            <button class="register-btn" id="submit">Create Account</button>
+            <button
+              type="button"
+              class="login-btn"
+              onclick="window.location='./login.html'"
+            >
+              I already have an account
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

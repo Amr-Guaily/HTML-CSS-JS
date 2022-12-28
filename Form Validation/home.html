@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h1>Welcome, <span class="name"></span></h1>
+      <p>Your Email is: <span class="email"></span></p>
+      <p>Your Id is: <span class="id"></span></p>
+    </div>
+  </body>
+
+  <script>
+    let userData = JSON.parse(localStorage.getItem('userData'));
+    let name = document.querySelector('.name'),
+      email = document.querySelector('.email'),
+      id = document.querySelector('.id');
+
+    email.textContent = `${userData.email}`;
+    name.textContent = `${userData.username}`;
+    id.textContent = `${userData.id}`;
+  </script>
+</html>
