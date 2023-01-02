@@ -1,59 +1,38 @@
-const notificationList = document.querySelector('.notifications');
-const successBtn = document.querySelector('#success'),
-    errorBtn = document.querySelector('#error'),
-    warningBtn = document.querySelector('#warning'),
-    infoBtn = document.querySelector('#info');
+const notificationList = document.querySelector(".notifications"),
+    buttons = document.querySelectorAll(".buttons .btn");
 
+const toastDetails = {
+    timer: 5000,
+    success: {
+        icon: 'fa-circle-check',
+        text: 'Success: This is a success toast.',
+    },
+    error: {
+        icon: 'fa-circle-xmark',
+        text: 'Error: This is an error toast.',
+    },
+    warning: {
+        icon: 'fa-triangle-exclamation',
+        text: 'Warning: This is a warning toast.',
+    },
+    info: {
+        icon: 'fa-circle-info',
+        text: 'Info: This is an information toast.',
+    }
+};
 
 // Functions
-function successToast() {
+function createToast(type) {
+    const { icon, text } = toastDetails[type];
+
     const toast = document.createElement('li');
     toast.innerHTML = `<div class="column">
-    <i class="fa-solid fa-circle-check"></i>
-    <span>Success: This is a success toast.</span>
+    <i class="fa-solid ${icon}"></i>
+    <span>${text}</span>
     </div>
     <i class="fa-solid fa-xmark" onClick="removeToast(this.parentElement)"></i>`;
 
-    toast.classList.add('toast', 'success');
-    notificationList.appendChild(toast);
-
-    toast.timeoutId = setTimeout(() => removeToast(toast), 5000);
-}
-function errorToast() {
-    const toast = document.createElement('li');
-    toast.innerHTML = `<div class="column">
-    <i class="fa-solid fa-circle-xmark"></i>
-    <span>Error: This is an error toast.</span>
-    </div>
-    <i class="fa-solid fa-xmark" onClick="removeToast(this.parentElement)"></i>`;
-
-    toast.classList.add('toast', 'error');
-    notificationList.appendChild(toast);
-
-    toast.timeoutId = setTimeout(() => removeToast(toast), 5000);
-}
-function warningToast() {
-    const toast = document.createElement('li');
-    toast.innerHTML = `<div class="column">
-    <i class="fa-solid fa-circle-check"></i>
-    <span>Success: This is a success toast.</span>
-    </div>
-    <i class="fa-solid fa-xmark" onClick="removeToast(this.parentElement)"></i>`;
-
-    toast.classList.add('toast', 'warning');
-    notificationList.appendChild(toast);
-
-    toast.timeoutId = setTimeout(() => removeToast(toast), 5000);
-}
-function infoToast() {
-    const toast = document.createElement('li');
-    toast.innerHTML = `<div class="column">
-    <i class="fa-solid fa-circle-check"></i>
-    <span>Success: This is a success toast.</span>
-    </div>
-    <i class="fa-solid fa-xmark" onClick="removeToast(this.parentElement)"></i>`;
-
-    toast.classList.add('toast', 'info');
+    toast.classList.add('toast', `${type}`);
     notificationList.appendChild(toast);
 
     toast.timeoutId = setTimeout(() => removeToast(toast), 5000);
@@ -66,7 +45,4 @@ function removeToast(toast) {
 }
 
 // Events
-successBtn.addEventListener('click', successToast);
-errorBtn.addEventListener('click', errorToast);
-warningBtn.addEventListener('click', warningToast);
-infoBtn.addEventListener('click', infoToast);
+buttons.forEach(btn => btn.addEventListener('click', () => createToast(btn.id)));
