@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    h3 {
+      color: red;
+    }
+  </style>
+  <body>
+    <!-- Web Component#1 -->
+    <user-card name="John Doe" avatar="https://i.pravatar.cc/150">
+      <div slot="email">amrgwely313@gmail.com</div>
+      <div slot="phone">123-456-7890</div>
+    </user-card>
+    <user-card name="John class" avatar="https://i.pravatar.cc/150">
+      <div slot="email">amrguaily@gmail.com</div>
+      <div slot="phone">123-456-7890</div>
+    </user-card>
+
+    <br />
+
+    <!-- Web Component#2 -->
+    <article id="article" contenteditable="true">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed debitis
+        harum hic saepe temporibus! Modi odio iure maxime. Odit, explicabo.
+      </p>
+
+      <h1>Lorem ipsum dolor sit amet.</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sed dicta
+        ratione sint voluptatem tenetur animi ipsam tempore similique, optio qui
+        adipisci quas nam aspernatur amet ullam eos dolor ut.
+      </p>
+
+      <text-count></text-count>
+    </article>
+
+    <!-- Web Component#3 -->
+    <turbo-stream action="update" target="article">
+      <template> Hello World </template>
+    </turbo-stream>
+
+    <!-- Web Component#4 -->
+    <driver-list></driver-list>
+    <driver-details></driver-details>
+
+    <!-- Web Component#5 -->
+    <video-component
+      youtube="OcasBcW0SJI?si=y_IV5fOwWIc-bj9t"
+    ></video-component>
+    <!-- <video-component vimeo="5K4WxqgVDno"></video-component> -->
+    <!-- <video-component html5="./video.mp4"></video-component> -->
+
+    <script src="./user-card.js"></script>
+    <script src="./text-count.js"></script>
+    <script src="./turbo-stream.js"></script>
+    <script src="./video-component.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
